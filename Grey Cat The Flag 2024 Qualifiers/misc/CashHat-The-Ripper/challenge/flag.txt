@@ -1,0 +1,2 @@
+Congratulations on cracking the password-protected zip file! Here is your flag:
+flag{W34k_P4ssw0rds_St4Nd_n0_Ch4nc3}
