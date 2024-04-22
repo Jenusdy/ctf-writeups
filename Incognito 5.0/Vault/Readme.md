@@ -2,33 +2,23 @@
 > 
 
 ## About the Challenge
-First time I look challenge, that message given to us looks like Morse Code and this challenge same from another [CTF challenge](https://ctftime.org/writeup/16495)
+We are given an ELF [file]('assets/challenge0'). 
+And if you try to run the file, it's going to ask you about secret code.
+![Run App](assets/image1.png)
+
 
 ## How to Solve?
-So I tried to decode this message by replace every word with this dictionary
+At the first time, we assume that this program gonna using string comparison 
+and to check this. We can use ```ltrace```
 
-```python
-{
-    'dah': '-', # dash
-    'di': '.', # dot
-    'dit': '. ' # dot with space
-}
-```
+```ltrace is a unix utility to tracing library call made by a program```
 
-And we got this message like this 
-```text
--.... ----. -.... ...-- --... ....- -.... -.... --... -... ....- -.. ...-- ----- --... ..--- --... ...-- ...-- ...-- ..... ..-. ...-- ....- -.... . -.... ....- ..... ..-. ....- ....- ...-- .---- ....- ....- ....- ----- -.... ---.. ..... ..-. ..... --... -.... ---.. ...-- .---- --... .- ...-- ...-- --... ..--- ...-- ...-- --... ..--- --... -.. ----- .-
-```
+After we run that, we got the flag
 
-By using this tools [CyberChef](https://cyberchef.io/), I can easily decode that code into this text
+![Flag](assets/image2.png)
 
 ```text
-696374667B4D307273335F346E645F44314440685F5768317A337233727D0A
-```
-
-It's actually hex and I just need to decode this to string and get the flag 
-```text
-flag : ictf{M0rs3_4nd_D1D@h_Wh1z3r3r}
+flag : ictf{welc0me_t0_rev3rs1ng}
 ```
 
 
