@@ -49,7 +49,7 @@ print(decode(str))
 If we run that code above it will print the flag we want
 
 ```text
-flag : ictf{ictf{v4r1abl3_k3y_x0r}
+flag : ictf{v4r1abl3_k3y_x0r}
 ```
 
 
