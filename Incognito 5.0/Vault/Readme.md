@@ -4,6 +4,7 @@
 ## About the Challenge
 We are given an ELF [file]('assets/challenge0'). 
 And if you try to run the file, it's going to ask you about secret code.
+
 ![Run App](assets/image1.png)
 
 
