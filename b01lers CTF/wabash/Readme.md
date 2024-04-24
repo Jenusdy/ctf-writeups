@@ -1,25 +1,26 @@
 # Wabash
->
+> nc gold.b01le.rs 7004
 
 ## About the Challenge
-We are given an ELF [file]('assets/challenge0').
-And if you try to run the file, it's going to ask you about secret code.
+We are given a service that runs on gold.b01le.rs port 7004.
+When I tried to connect, we are provided a bash that can run every command we want.
 
-![Run App](assets/image1.png)
+But every time we type a command. It always adds `wa` in front of that word
 
+For example, If we type ```cat flag.txt```
+
+It will run command ```wacat waflag.txt``` and this command is not valid.
 
 ## How to Solve?
-At the first time, we assume that this program gonna using string comparison
-and to check this. We can use ```ltrace```
+This is a bash jail challenge. So we just need to escape by using ```||``` pipe char
+```bash
+$ || cat flag.txt
+```
 
-```ltrace is a unix utility to tracing library call made by a program```
-
-After we run that, we got the flag
-
-![Flag](assets/image2.png)
+![Flag](assets/image1.png)
 
 ```text
-flag : ictf{welc0me_t0_rev3rs1ng}
+flag : bctf{wabash:_command_not_found521065b339eb59a71c06a0dec824cd55}
 ```
 
 
