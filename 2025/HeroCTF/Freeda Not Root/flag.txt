@@ -1,0 +1,16 @@
+frida -U -n Freeda2 -l HeroCTF/Freeda\ Not\ Root/hook.js                                                                                ─╯
+     ____
+    / _  |   Frida 17.5.1 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Android Emulator 5554 (id=emulator-5554)
+Attaching...                                                            
+[*] Vault.get_flag() hook installed
+[Android Emulator 5554::Freeda2 ]-> [*] get_flag() called
+[*] Original flag: HERO{D1D_Y0U_U53_0BJ3C71ON?}
