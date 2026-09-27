@@ -1,0 +1,319 @@
+
+interlock:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <.init>:
+    1000:	f3 0f 1e fa          	endbr64
+    1004:	48 83 ec 08          	sub    rsp,0x8
+    1008:	48 8b 05 c9 2f 00 00 	mov    rax,QWORD PTR [rip+0x2fc9]        # 3fd8 <AES_cbc_encrypt@plt+0x2e68>
+    100f:	48 85 c0             	test   rax,rax
+    1012:	74 02                	je     1016 <__cxa_finalize@plt-0xba>
+    1014:	ff d0                	call   rax
+    1016:	48 83 c4 08          	add    rsp,0x8
+    101a:	c3                   	ret
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 52 2f 00 00    	push   QWORD PTR [rip+0x2f52]        # 3f78 <AES_cbc_encrypt@plt+0x2e08>
+    1026:	ff 25 54 2f 00 00    	jmp    QWORD PTR [rip+0x2f54]        # 3f80 <AES_cbc_encrypt@plt+0x2e10>
+    102c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+    1030:	f3 0f 1e fa          	endbr64
+    1034:	68 00 00 00 00       	push   0x0
+    1039:	e9 e2 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    103e:	66 90                	xchg   ax,ax
+    1040:	f3 0f 1e fa          	endbr64
+    1044:	68 01 00 00 00       	push   0x1
+    1049:	e9 d2 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    104e:	66 90                	xchg   ax,ax
+    1050:	f3 0f 1e fa          	endbr64
+    1054:	68 02 00 00 00       	push   0x2
+    1059:	e9 c2 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    105e:	66 90                	xchg   ax,ax
+    1060:	f3 0f 1e fa          	endbr64
+    1064:	68 03 00 00 00       	push   0x3
+    1069:	e9 b2 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    106e:	66 90                	xchg   ax,ax
+    1070:	f3 0f 1e fa          	endbr64
+    1074:	68 04 00 00 00       	push   0x4
+    1079:	e9 a2 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    107e:	66 90                	xchg   ax,ax
+    1080:	f3 0f 1e fa          	endbr64
+    1084:	68 05 00 00 00       	push   0x5
+    1089:	e9 92 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    108e:	66 90                	xchg   ax,ax
+    1090:	f3 0f 1e fa          	endbr64
+    1094:	68 06 00 00 00       	push   0x6
+    1099:	e9 82 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    109e:	66 90                	xchg   ax,ax
+    10a0:	f3 0f 1e fa          	endbr64
+    10a4:	68 07 00 00 00       	push   0x7
+    10a9:	e9 72 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    10ae:	66 90                	xchg   ax,ax
+    10b0:	f3 0f 1e fa          	endbr64
+    10b4:	68 08 00 00 00       	push   0x8
+    10b9:	e9 62 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    10be:	66 90                	xchg   ax,ax
+    10c0:	f3 0f 1e fa          	endbr64
+    10c4:	68 09 00 00 00       	push   0x9
+    10c9:	e9 52 ff ff ff       	jmp    1020 <__cxa_finalize@plt-0xb0>
+    10ce:	66 90                	xchg   ax,ax
+
+Disassembly of section .plt.got:
+
+00000000000010d0 <__cxa_finalize@plt>:
+    10d0:	f3 0f 1e fa          	endbr64
+    10d4:	ff 25 16 2f 00 00    	jmp    QWORD PTR [rip+0x2f16]        # 3ff0 <AES_cbc_encrypt@plt+0x2e80>
+    10da:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .plt.sec:
+
+00000000000010e0 <puts@plt>:
+    10e0:	f3 0f 1e fa          	endbr64
+    10e4:	ff 25 9e 2e 00 00    	jmp    QWORD PTR [rip+0x2e9e]        # 3f88 <AES_cbc_encrypt@plt+0x2e18>
+    10ea:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+00000000000010f0 <__printf_chk@plt>:
+    10f0:	f3 0f 1e fa          	endbr64
+    10f4:	ff 25 96 2e 00 00    	jmp    QWORD PTR [rip+0x2e96]        # 3f90 <AES_cbc_encrypt@plt+0x2e20>
+    10fa:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001100 <MD5@plt>:
+    1100:	f3 0f 1e fa          	endbr64
+    1104:	ff 25 8e 2e 00 00    	jmp    QWORD PTR [rip+0x2e8e]        # 3f98 <AES_cbc_encrypt@plt+0x2e28>
+    110a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001110 <AES_set_decrypt_key@plt>:
+    1110:	f3 0f 1e fa          	endbr64
+    1114:	ff 25 86 2e 00 00    	jmp    QWORD PTR [rip+0x2e86]        # 3fa0 <AES_cbc_encrypt@plt+0x2e30>
+    111a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001120 <fgets@plt>:
+    1120:	f3 0f 1e fa          	endbr64
+    1124:	ff 25 7e 2e 00 00    	jmp    QWORD PTR [rip+0x2e7e]        # 3fa8 <AES_cbc_encrypt@plt+0x2e38>
+    112a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001130 <strlen@plt>:
+    1130:	f3 0f 1e fa          	endbr64
+    1134:	ff 25 76 2e 00 00    	jmp    QWORD PTR [rip+0x2e76]        # 3fb0 <AES_cbc_encrypt@plt+0x2e40>
+    113a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001140 <__stack_chk_fail@plt>:
+    1140:	f3 0f 1e fa          	endbr64
+    1144:	ff 25 6e 2e 00 00    	jmp    QWORD PTR [rip+0x2e6e]        # 3fb8 <AES_cbc_encrypt@plt+0x2e48>
+    114a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001150 <strncpy@plt>:
+    1150:	f3 0f 1e fa          	endbr64
+    1154:	ff 25 66 2e 00 00    	jmp    QWORD PTR [rip+0x2e66]        # 3fc0 <AES_cbc_encrypt@plt+0x2e50>
+    115a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001160 <strcspn@plt>:
+    1160:	f3 0f 1e fa          	endbr64
+    1164:	ff 25 5e 2e 00 00    	jmp    QWORD PTR [rip+0x2e5e]        # 3fc8 <AES_cbc_encrypt@plt+0x2e58>
+    116a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000001170 <AES_cbc_encrypt@plt>:
+    1170:	f3 0f 1e fa          	endbr64
+    1174:	ff 25 56 2e 00 00    	jmp    QWORD PTR [rip+0x2e56]        # 3fd0 <AES_cbc_encrypt@plt+0x2e60>
+    117a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .text:
+
+0000000000001180 <.text>:
+    1180:	f3 0f 1e fa          	endbr64
+    1184:	41 54                	push   r12
+    1186:	0f 57 c0             	xorps  xmm0,xmm0
+    1189:	55                   	push   rbp
+    118a:	53                   	push   rbx
+    118b:	48 81 ec 60 01 00 00 	sub    rsp,0x160
+    1192:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    1199:	00 00 
+    119b:	48 89 84 24 58 01 00 	mov    QWORD PTR [rsp+0x158],rax
+    11a2:	00 
+    11a3:	31 c0                	xor    eax,eax
+    11a5:	ff cf                	dec    edi
+    11a7:	c6 84 24 26 01 00 00 	mov    BYTE PTR [rsp+0x126],0x0
+    11ae:	00 
+    11af:	48 8d 9c 24 16 01 00 	lea    rbx,[rsp+0x116]
+    11b6:	00 
+    11b7:	0f 11 84 24 16 01 00 	movups XMMWORD PTR [rsp+0x116],xmm0
+    11be:	00 
+    11bf:	7e 13                	jle    11d4 <AES_cbc_encrypt@plt+0x64>
+    11c1:	48 8b 76 08          	mov    rsi,QWORD PTR [rsi+0x8]
+    11c5:	ba 10 00 00 00       	mov    edx,0x10
+    11ca:	48 89 df             	mov    rdi,rbx
+    11cd:	e8 7e ff ff ff       	call   1150 <strncpy@plt>
+    11d2:	eb 47                	jmp    121b <AES_cbc_encrypt@plt+0xab>
+    11d4:	48 8d 35 29 0e 00 00 	lea    rsi,[rip+0xe29]        # 2004 <AES_cbc_encrypt@plt+0xe94>
+    11db:	bf 02 00 00 00       	mov    edi,0x2
+    11e0:	31 c0                	xor    eax,eax
+    11e2:	e8 09 ff ff ff       	call   10f0 <__printf_chk@plt>
+    11e7:	48 8b 15 22 2e 00 00 	mov    rdx,QWORD PTR [rip+0x2e22]        # 4010 <stdin@GLIBC_2.2.5>
+    11ee:	be 11 00 00 00       	mov    esi,0x11
+    11f3:	48 89 df             	mov    rdi,rbx
+    11f6:	e8 25 ff ff ff       	call   1120 <fgets@plt>
+    11fb:	48 85 c0             	test   rax,rax
+    11fe:	0f 84 83 00 00 00    	je     1287 <AES_cbc_encrypt@plt+0x117>
+    1204:	48 8d 35 ff 0d 00 00 	lea    rsi,[rip+0xdff]        # 200a <AES_cbc_encrypt@plt+0xe9a>
+    120b:	48 89 df             	mov    rdi,rbx
+    120e:	e8 4d ff ff ff       	call   1160 <strcspn@plt>
+    1213:	c6 84 04 16 01 00 00 	mov    BYTE PTR [rsp+rax*1+0x116],0x0
+    121a:	00 
+    121b:	48 89 df             	mov    rdi,rbx
+    121e:	e8 0d ff ff ff       	call   1130 <strlen@plt>
+    1223:	48 83 f8 10          	cmp    rax,0x10
+    1227:	75 52                	jne    127b <AES_cbc_encrypt@plt+0x10b>
+    1229:	48 8d 15 70 0e 00 00 	lea    rdx,[rip+0xe70]        # 20a0 <AES_cbc_encrypt@plt+0xf30>
+    1230:	48 8d 3d 59 0e 00 00 	lea    rdi,[rip+0xe59]        # 2090 <AES_cbc_encrypt@plt+0xf20>
+    1237:	b9 01 00 00 00       	mov    ecx,0x1
+    123c:	45 31 d2             	xor    r10d,r10d
+    123f:	4c 8d 8a 00 01 00 00 	lea    r9,[rdx+0x100]
+    1246:	31 c0                	xor    eax,eax
+    1248:	31 f6                	xor    esi,esi
+    124a:	44 0f b6 04 02       	movzx  r8d,BYTE PTR [rdx+rax*1]
+    124f:	44 0f b6 1c 03       	movzx  r11d,BYTE PTR [rbx+rax*1]
+    1254:	48 ff c0             	inc    rax
+    1257:	45 0f af c3          	imul   r8d,r11d
+    125b:	44 01 c6             	add    esi,r8d
+    125e:	48 83 f8 10          	cmp    rax,0x10
+    1262:	75 e6                	jne    124a <AES_cbc_encrypt@plt+0xda>
+    1264:	40 38 37             	cmp    BYTE PTR [rdi],sil
+    1267:	41 0f 45 ca          	cmovne ecx,r10d
+    126b:	48 83 c2 10          	add    rdx,0x10
+    126f:	48 ff c7             	inc    rdi
+    1272:	4c 39 ca             	cmp    rdx,r9
+    1275:	75 cf                	jne    1246 <AES_cbc_encrypt@plt+0xd6>
+    1277:	85 c9                	test   ecx,ecx
+    1279:	75 16                	jne    1291 <AES_cbc_encrypt@plt+0x121>
+    127b:	48 8d 3d 8b 0d 00 00 	lea    rdi,[rip+0xd8b]        # 200d <AES_cbc_encrypt@plt+0xe9d>
+    1282:	e8 59 fe ff ff       	call   10e0 <puts@plt>
+    1287:	b8 01 00 00 00       	mov    eax,0x1
+    128c:	e9 a8 00 00 00       	jmp    1339 <AES_cbc_encrypt@plt+0x1c9>
+    1291:	4c 8d a4 24 f6 00 00 	lea    r12,[rsp+0xf6]
+    1298:	00 
+    1299:	48 89 df             	mov    rdi,rbx
+    129c:	be 10 00 00 00       	mov    esi,0x10
+    12a1:	48 89 e5             	mov    rbp,rsp
+    12a4:	4c 89 e2             	mov    rdx,r12
+    12a7:	48 8d 9c 24 27 01 00 	lea    rbx,[rsp+0x127]
+    12ae:	00 
+    12af:	e8 4c fe ff ff       	call   1100 <MD5@plt>
+    12b4:	31 c0                	xor    eax,eax
+    12b6:	b9 31 00 00 00       	mov    ecx,0x31
+    12bb:	48 89 ea             	mov    rdx,rbp
+    12be:	48 8d bc 24 27 01 00 	lea    rdi,[rsp+0x127]
+    12c5:	00 
+    12c6:	be 80 00 00 00       	mov    esi,0x80
+    12cb:	f3 aa                	rep stos BYTE PTR es:[rdi],al
+    12cd:	4c 89 e7             	mov    rdi,r12
+    12d0:	e8 3b fe ff ff       	call   1110 <AES_set_decrypt_key@plt>
+    12d5:	0f 57 c0             	xorps  xmm0,xmm0
+    12d8:	45 31 c9             	xor    r9d,r9d
+    12db:	48 89 e9             	mov    rcx,rbp
+    12de:	4c 8d 84 24 06 01 00 	lea    r8,[rsp+0x106]
+    12e5:	00 
+    12e6:	ba 30 00 00 00       	mov    edx,0x30
+    12eb:	48 89 de             	mov    rsi,rbx
+    12ee:	0f 11 84 24 06 01 00 	movups XMMWORD PTR [rsp+0x106],xmm0
+    12f5:	00 
+    12f6:	48 8d 3d 63 0d 00 00 	lea    rdi,[rip+0xd63]        # 2060 <AES_cbc_encrypt@plt+0xef0>
+    12fd:	e8 6e fe ff ff       	call   1170 <AES_cbc_encrypt@plt>
+    1302:	8a 84 24 56 01 00 00 	mov    al,BYTE PTR [rsp+0x156]
+    1309:	3c 2f                	cmp    al,0x2f
+    130b:	77 14                	ja     1321 <AES_cbc_encrypt@plt+0x1b1>
+    130d:	0f b6 d0             	movzx  edx,al
+    1310:	b8 30 00 00 00       	mov    eax,0x30
+    1315:	29 d0                	sub    eax,edx
+    1317:	48 98                	cdqe
+    1319:	c6 84 04 27 01 00 00 	mov    BYTE PTR [rsp+rax*1+0x127],0x0
+    1320:	00 
+    1321:	48 89 da             	mov    rdx,rbx
+    1324:	48 8d 35 f6 0c 00 00 	lea    rsi,[rip+0xcf6]        # 2021 <AES_cbc_encrypt@plt+0xeb1>
+    132b:	bf 02 00 00 00       	mov    edi,0x2
+    1330:	31 c0                	xor    eax,eax
+    1332:	e8 b9 fd ff ff       	call   10f0 <__printf_chk@plt>
+    1337:	31 c0                	xor    eax,eax
+    1339:	48 8b 94 24 58 01 00 	mov    rdx,QWORD PTR [rsp+0x158]
+    1340:	00 
+    1341:	64 48 2b 14 25 28 00 	sub    rdx,QWORD PTR fs:0x28
+    1348:	00 00 
+    134a:	74 05                	je     1351 <AES_cbc_encrypt@plt+0x1e1>
+    134c:	e8 ef fd ff ff       	call   1140 <__stack_chk_fail@plt>
+    1351:	48 81 c4 60 01 00 00 	add    rsp,0x160
+    1358:	5b                   	pop    rbx
+    1359:	5d                   	pop    rbp
+    135a:	41 5c                	pop    r12
+    135c:	c3                   	ret
+    135d:	0f 1f 00             	nop    DWORD PTR [rax]
+    1360:	f3 0f 1e fa          	endbr64
+    1364:	31 ed                	xor    ebp,ebp
+    1366:	49 89 d1             	mov    r9,rdx
+    1369:	5e                   	pop    rsi
+    136a:	48 89 e2             	mov    rdx,rsp
+    136d:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+    1371:	50                   	push   rax
+    1372:	54                   	push   rsp
+    1373:	45 31 c0             	xor    r8d,r8d
+    1376:	31 c9                	xor    ecx,ecx
+    1378:	48 8d 3d 01 fe ff ff 	lea    rdi,[rip+0xfffffffffffffe01]        # 1180 <AES_cbc_encrypt@plt+0x10>
+    137f:	ff 15 73 2c 00 00    	call   QWORD PTR [rip+0x2c73]        # 3ff8 <AES_cbc_encrypt@plt+0x2e88>
+    1385:	f4                   	hlt
+    1386:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+    138d:	00 00 00 
+    1390:	48 8d 3d 79 2c 00 00 	lea    rdi,[rip+0x2c79]        # 4010 <stdin@GLIBC_2.2.5>
+    1397:	48 8d 05 72 2c 00 00 	lea    rax,[rip+0x2c72]        # 4010 <stdin@GLIBC_2.2.5>
+    139e:	48 39 f8             	cmp    rax,rdi
+    13a1:	74 15                	je     13b8 <AES_cbc_encrypt@plt+0x248>
+    13a3:	48 8b 05 36 2c 00 00 	mov    rax,QWORD PTR [rip+0x2c36]        # 3fe0 <AES_cbc_encrypt@plt+0x2e70>
+    13aa:	48 85 c0             	test   rax,rax
+    13ad:	74 09                	je     13b8 <AES_cbc_encrypt@plt+0x248>
+    13af:	ff e0                	jmp    rax
+    13b1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    13b8:	c3                   	ret
+    13b9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    13c0:	48 8d 3d 49 2c 00 00 	lea    rdi,[rip+0x2c49]        # 4010 <stdin@GLIBC_2.2.5>
+    13c7:	48 8d 35 42 2c 00 00 	lea    rsi,[rip+0x2c42]        # 4010 <stdin@GLIBC_2.2.5>
+    13ce:	48 29 fe             	sub    rsi,rdi
+    13d1:	48 89 f0             	mov    rax,rsi
+    13d4:	48 c1 ee 3f          	shr    rsi,0x3f
+    13d8:	48 c1 f8 03          	sar    rax,0x3
+    13dc:	48 01 c6             	add    rsi,rax
+    13df:	48 d1 fe             	sar    rsi,1
+    13e2:	74 14                	je     13f8 <AES_cbc_encrypt@plt+0x288>
+    13e4:	48 8b 05 fd 2b 00 00 	mov    rax,QWORD PTR [rip+0x2bfd]        # 3fe8 <AES_cbc_encrypt@plt+0x2e78>
+    13eb:	48 85 c0             	test   rax,rax
+    13ee:	74 08                	je     13f8 <AES_cbc_encrypt@plt+0x288>
+    13f0:	ff e0                	jmp    rax
+    13f2:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+    13f8:	c3                   	ret
+    13f9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    1400:	f3 0f 1e fa          	endbr64
+    1404:	80 3d 0d 2c 00 00 00 	cmp    BYTE PTR [rip+0x2c0d],0x0        # 4018 <stdin@GLIBC_2.2.5+0x8>
+    140b:	75 2b                	jne    1438 <AES_cbc_encrypt@plt+0x2c8>
+    140d:	55                   	push   rbp
+    140e:	48 83 3d da 2b 00 00 	cmp    QWORD PTR [rip+0x2bda],0x0        # 3ff0 <AES_cbc_encrypt@plt+0x2e80>
+    1415:	00 
+    1416:	48 89 e5             	mov    rbp,rsp
+    1419:	74 0c                	je     1427 <AES_cbc_encrypt@plt+0x2b7>
+    141b:	48 8b 3d e6 2b 00 00 	mov    rdi,QWORD PTR [rip+0x2be6]        # 4008 <AES_cbc_encrypt@plt+0x2e98>
+    1422:	e8 a9 fc ff ff       	call   10d0 <__cxa_finalize@plt>
+    1427:	e8 64 ff ff ff       	call   1390 <AES_cbc_encrypt@plt+0x220>
+    142c:	c6 05 e5 2b 00 00 01 	mov    BYTE PTR [rip+0x2be5],0x1        # 4018 <stdin@GLIBC_2.2.5+0x8>
+    1433:	5d                   	pop    rbp
+    1434:	c3                   	ret
+    1435:	0f 1f 00             	nop    DWORD PTR [rax]
+    1438:	c3                   	ret
+    1439:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    1440:	f3 0f 1e fa          	endbr64
+    1444:	e9 77 ff ff ff       	jmp    13c0 <AES_cbc_encrypt@plt+0x250>
+
+Disassembly of section .fini:
+
+000000000000144c <.fini>:
+    144c:	f3 0f 1e fa          	endbr64
+    1450:	48 83 ec 08          	sub    rsp,0x8
+    1454:	48 83 c4 08          	add    rsp,0x8
+    1458:	c3                   	ret

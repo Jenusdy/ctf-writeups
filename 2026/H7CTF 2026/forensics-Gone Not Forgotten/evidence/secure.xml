@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="obfuscation_key">n0v4ch4t</string>
+    <string name="stored_body_encoding">hex(xor(body, obfuscation_key))</string>
+    <boolean name="biometric_lock" value="true" />
+</map>
