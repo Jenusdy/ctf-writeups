@@ -7,6 +7,7 @@ This is a collection of my CTF Writeup on event I participate.
 | Orgnizer | Writeup  | 
 |----------|----------|
 | CSAW | [Link](/2026/CSAW/)  |
+| H7CTF | [Link](/2026/H7CTF%202026/)  |
 
 
 - [CTF Writeups 2025](/2025/)
